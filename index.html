@@ -43,10 +43,9 @@ class: home
 							Fast. Really Fast.
 						</h2>
 						<p class="mb-0">
-							Odyssey is a snappy, responsive experience 
+							libhooker is a snappy, responsive experience 
 							that you can't find anywhere else, with support 
-							for all iOS versions from iOS 13.0-13.7, 
-							including A12 & A13 devices.
+							for devices with 64-bit ARM CPUs, including iOS 11 and higher, watchOS 5.0 and higher as well as Linux.
 						</p>
 					</div>
 				</div>
@@ -111,66 +110,6 @@ class: home
 </div>
 
 </div>
-</section>
-
-
-<section id="download">
-	<div class="container text-center my-5">
-		<h2>Download</h2>
-	</div>
-	<div class="container text-center my-5">
-		<h3>AltStore Repo & Shortcut</h3>
-		<br>
-		<a href="altstore://source?url=https://theodyssey.dev/altstore/odysseysource.json" class="btn btn-primary btn-download mb-1">
-			<svg class="mr-1 icon icon-spaced icon-download" viewBox="0 0 100 100">
-				<path d="M51.2285,101.2344 C78.9141,101.2344 101.766,78.38281 101.766,50.7461 C101.766,23.1094 78.8652,0.2578 51.1797,0.2578 C23.543,0.2578 0.74023,23.1094 0.74023,50.7461 C0.74023,78.38281 23.5918,101.2344 51.2285,101.2344 Z M51.1309,73.5 C48.1523,73.5 46.3457,71.3516 46.3457,68.2754 L46.3457,55.5801 L32.8691,55.5801 C29.8418,55.5801 27.5957,53.7734 27.5957,50.8438 C27.5957,47.8164 29.7441,45.9609 32.8691,45.9609 L46.3457,45.9609 L46.3457,32.5332 C46.3457,29.457 48.1523,27.3086 51.1309,27.3086 C54.1094,27.3086 56.0137,29.3594 56.0137,32.5332 L56.0137,45.9609 L69.5391,45.9609 C72.6641,45.9609 74.7637,47.8164 74.7637,50.8438 C74.7637,53.7734 72.6152,55.5801 69.5391,55.5801 L56.0137,55.5801 L56.0137,68.2754 C56.0137,71.4492 54.1094,73.5 51.1309,73.5 Z" id="Shape"></path>
-			</svg>
-			Add AltStore Repo
-		</a>
-		<a href="https://routinehub.co/shortcut/6372" class="btn btn-primary btn-download mb-1">
-			<svg class="mr-1 icon icon-spaced icon-download" viewBox="0 0 100 100">
-				<path d="M51.2285,101.2344 C78.9141,101.2344 101.766,78.38281 101.766,50.7461 C101.766,23.1094 78.8652,0.2578 51.1797,0.2578 C23.543,0.2578 0.74023,23.1094 0.74023,50.7461 C0.74023,78.38281 23.5918,101.2344 51.2285,101.2344 Z M51.1309,73.5 C48.1523,73.5 46.3457,71.3516 46.3457,68.2754 L46.3457,55.5801 L32.8691,55.5801 C29.8418,55.5801 27.5957,53.7734 27.5957,50.8438 C27.5957,47.8164 29.7441,45.9609 32.8691,45.9609 L46.3457,45.9609 L46.3457,32.5332 C46.3457,29.457 48.1523,27.3086 51.1309,27.3086 C54.1094,27.3086 56.0137,29.3594 56.0137,32.5332 L56.0137,45.9609 L69.5391,45.9609 C72.6641,45.9609 74.7637,47.8164 74.7637,50.8438 C74.7637,53.7734 72.6152,55.5801 69.5391,55.5801 L56.0137,55.5801 L56.0137,68.2754 C56.0137,71.4492 54.1094,73.5 51.1309,73.5 Z" id="Shape"></path>
-			</svg>
-			Add Shortcut
-		</a>
-	</div>
-	<div class="container">
-		<h3 class="text-center">IPA Download</h3>
-		<br>
-		{% assign latest_post = site.posts.first %}
-		<div class="row download">
-			<div class="col-md-4">
-				{% assign date_format = site.minima.date_format | default: "%b
-				%-d, %Y" %}
-				<h3>{{ latest_post.title | escape }}</h3>
-				<p class="h6">
-					Released {{ latest_post.date | date: date_format }}
-				</p>
-				<p class="mt-4 d-none d-md-block small" aria-hidden="true">
-					<a href="/releases/">Older Releases</a>
-				</p>
-			</div>
-			<article class="col-md-8">
-				{{ latest_post.content }}
-				
-				{% for file in latest_post.files %}
-				<span>
-				<a href="{{ file.url }}" class="btn btn-primary btn-download mb-1">
-					<svg class="mr-1 icon icon-spaced icon-download" viewBox="0 0 81 81">
-						<path
-							d="m40.7285 80.63867c21.8262 0 39.8926-18.06637 39.8926-39.89257 0-21.7773-18.1152-39.8926-39.9414-39.8926s-39.84376 18.1153-39.84376 39.8926c0 21.8262 18.06636 39.89257 39.89256 39.89257zm0-18.26167c-1.2207 0-2.1973-.4395-3.2715-1.5137l-13.5254-13.7695c-.7324-.7813-1.0742-1.6114-1.0742-2.7344 0-2.1485 1.5625-3.7598 3.711-3.7598 1.123 0 2.1484.4883 2.7832 1.1719l4.1504 4.4433 3.5644 4.5899-.3906-9.1309v-18.5058c0-2.295 1.709-3.9063 4.0527-3.9063 2.2949 0 4.0527 1.6113 4.0527 3.9063v18.5058l-.4394 9.1309 3.6133-4.6387 4.1504-4.3945c.6836-.6836 1.6601-1.1719 2.7832-1.1719 2.1484 0 3.7597 1.6113 3.7597 3.7598 0 1.123-.4394 1.9531-1.123 2.7344l-13.5254 13.7695c-.9766 1.0254-2.002 1.5137-3.2715 1.5137z"
-						/>
-					</svg>
-					{{ file.name | escape }}
-				</a></span>
-				{% endfor %}
-			
-				<p class="mt-4 d-block d-md-none small text-center">
-					<a href="/releases/">Older Releases</a>
-				</p>
-			</article>
-		</div>
-	</div>
 </section>
 
 <section id="tabs" class="install-tab">
