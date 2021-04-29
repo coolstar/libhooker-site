@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LHMemoryPatch Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Struct/LHMemoryPatch" class="dashAnchor"></a>
+    <a title="LHMemoryPatch Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> 1.6.0 Docs</a> (100% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        LHMemoryPatch Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/LHOptions.html">LHOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LIBHOOKER_ERR.html">LIBHOOKER_ERR</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LBHookMessage">LBHookMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHCloseImage">LHCloseImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHExecMemory">LHExecMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHFindSymbols">LHFindSymbols</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHHookFunctions">LHHookFunctions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHOpenImage">LHOpenImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHPatchMemory">LHPatchMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHStrError">LHStrError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/LHFunctionHook.html">LHFunctionHook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LHFunctionHookOptions.html">LHFunctionHookOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LHMemoryPatch.html">LHMemoryPatch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/c:@S@libhooker_image">libhooker_image</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>LHMemoryPatch</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight objective_c"><code><span class="k">struct</span> <span class="n">LHMemoryPatch</span> <span class="p">{}</span></code></pre>
+
+                </div>
+              </div>
+            <p>Describes a memory region to patch</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@S@LHMemoryPatch@FI@destination"></a>
+                    <a name="//apple_ref/objc/Field/destination" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@LHMemoryPatch@FI@destination">destination</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A pointer to the memory location to patch</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="o">*</span><span class="n">destination</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@S@LHMemoryPatch@FI@data"></a>
+                    <a name="//apple_ref/objc/Field/data" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@LHMemoryPatch@FI@data">data</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A pointer to the data to write at the patch location</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@S@LHMemoryPatch@FI@size"></a>
+                    <a name="//apple_ref/objc/Field/size" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@LHMemoryPatch@FI@size">size</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of bytes to write at the patch location</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">size_t</span> <span class="n">size</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@S@LHMemoryPatch@FI@options"></a>
+                    <a name="//apple_ref/objc/Field/options" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@LHMemoryPatch@FI@options">options</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A pointer to an extended options struct. Currently unused.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="o">*</span><span class="n">options</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://libhooker.com" target="_blank" rel="external">CoolStar</a>. All rights reserved. (Last updated: 2021-04-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Functions" class="dashAnchor"></a>
+    <a title="Functions  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> 1.6.0 Docs</a> (100% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Functions  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/LHOptions.html">LHOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LIBHOOKER_ERR.html">LIBHOOKER_ERR</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@LBHookMessage">LBHookMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@LHCloseImage">LHCloseImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@LHExecMemory">LHExecMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@LHFindSymbols">LHFindSymbols</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@LHHookFunctions">LHHookFunctions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@LHOpenImage">LHOpenImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@LHPatchMemory">LHPatchMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@LHStrError">LHStrError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/LHFunctionHook.html">LHFunctionHook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LHFunctionHookOptions.html">LHFunctionHookOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LHMemoryPatch.html">LHMemoryPatch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/c:@S@libhooker_image">libhooker_image</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Functions</h1>
+            <p>The following functions are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@LBHookMessage"></a>
+                    <a name="//apple_ref/objc/Function/LBHookMessage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@LBHookMessage">LBHookMessage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hook an Objective-C method</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Libraries often need to hook Objective-C methods. This provides an easy way to hook the method and call to the
+original method. This also provides a guarantee that hooking a class that doesn&rsquo;t implement a method won&rsquo;t overwrite the method
+in the super class.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n"><a href="Enums/LIBHOOKER_ERR.html">LIBHOOKER_ERR</a></span> <span class="n">LBHookMessage</span><span class="p">(</span><span class="n">Class</span> <span class="n">objcClass</span><span class="p">,</span> <span class="n">SEL</span> <span class="n">selector</span><span class="p">,</span>
+                                 <span class="kt">void</span> <span class="o">*</span><span class="n">replacement</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">old_ptr</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>class</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Objective C class to hook</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>selector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Objective C selector to hook</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>replacement</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A pointer to the replacement implementation that gets called instead of the original function</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>old_ptr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A pointer to the original implementation that can be called if needed</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns any errors that may have taken place when hooking the method</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@LHStrError"></a>
+                    <a name="//apple_ref/objc/Function/LHStrError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@LHStrError">LHStrError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get a human readable string for debugging purposes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">LHStrError</span><span class="p">(</span><span class="k">enum</span> <span class="n"><a href="Enums/LIBHOOKER_ERR.html">LIBHOOKER_ERR</a></span> <span class="n">err</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>err</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The raw error value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A human-readable error string, or &ldquo;Unknown Error&rdquo; on invalid error.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@LHOpenImage"></a>
+                    <a name="//apple_ref/objc/Function/LHOpenImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@LHOpenImage">LHOpenImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Open a dylib for use with LHFindSymbols</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>dyld handles do not provide enough information to grab symbols. Use this to have libhooker load the dylib.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">struct</span> <span class="n"><a href="Structs.html#/c:@S@libhooker_image">libhooker_image</a></span> <span class="o">*</span><span class="n">LHOpenImage</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The path to the image on disk or in the shared cache.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A handle to the dylib that may then be used with LHFindSymbols to find symbols.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@LHCloseImage"></a>
+                    <a name="//apple_ref/objc/Function/LHCloseImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@LHCloseImage">LHCloseImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Close and free a dylib handle opened with LHOpenImage</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">LHCloseImage</span><span class="p">(</span><span class="k">struct</span> <span class="n"><a href="Structs.html#/c:@S@libhooker_image">libhooker_image</a></span> <span class="o">*</span><span class="n">libhookerImage</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>libhookerImage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The libhooker handle to the image on disk or in the shared cache.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@LHFindSymbols"></a>
+                    <a name="//apple_ref/objc/Function/LHFindSymbols" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@LHFindSymbols">LHFindSymbols</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Search for symbols within a dylib either on disk or in the dyld shared cache.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>dyld often is not able to find symbols that are present but not marked as public and/or exported.
+Also often the dyld shared cache has symbols replaced with <code>&lt;redacted&gt;</code> when loaded into memory.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">_Bool</span> <span class="n">LHFindSymbols</span><span class="p">(</span><span class="k">struct</span> <span class="n"><a href="Structs.html#/c:@S@libhooker_image">libhooker_image</a></span> <span class="o">*</span><span class="n">libhookerImage</span><span class="p">,</span>
+                    <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">symbolNames</span><span class="p">,</span> <span class="kt">void</span> <span class="o">**</span><span class="n">searchSyms</span><span class="p">,</span>
+                    <span class="kt">size_t</span> <span class="n">searchSymCount</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>libhookerImage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The libhooker handle to the image on disk or in the shared cache</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>symbolNames</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of the symbol names to search for</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchSyms</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array that gets populated with the symbols found</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchSymCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of symbols to search for</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns true if all symbols were found</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@LHExecMemory"></a>
+                    <a name="//apple_ref/objc/Function/LHExecMemory" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@LHExecMemory">LHExecMemory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an executable page from raw instruction data</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Sometimes a library may generate or load new code, but may simply want an executable page with this new code.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">_Bool</span> <span class="n">LHExecMemory</span><span class="p">(</span><span class="kt">void</span> <span class="o">**</span><span class="n">page</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>page</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A pointer that gets written to with the address of code in the new memory page</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of ARM64 opcodes to write to this new memory page.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The size of data</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns true if the memory was created. Returns false otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@LHPatchMemory"></a>
+                    <a name="//apple_ref/objc/Function/LHPatchMemory" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@LHPatchMemory">LHPatchMemory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Patch memory (that may often be read-only or read/execute-only)</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Sometimes low level memory access is required to hook parts of applications. This function
+provides an easy way for libraries to do so, with a relatively safe guarantee of preserving
+memory permissions, and re-mapping the memory if required.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">int</span> <span class="n">LHPatchMemory</span><span class="p">(</span><span class="k">const</span> <span class="k">struct</span> <span class="n"><a href="Structs/LHMemoryPatch.html">LHMemoryPatch</a></span> <span class="o">*</span><span class="n">patches</span><span class="p">,</span> <span class="kt">int</span> <span class="n">count</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>patches</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A pointer to the destination to write to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>count</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of memory regions to patch</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns any errors that may have taken place while hooking the functions</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@LHHookFunctions"></a>
+                    <a name="//apple_ref/objc/Function/LHHookFunctions" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@LHHookFunctions">LHHookFunctions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hook Functions in memory</p>
+
+<p>note:
+Libraries often need to hook functions in memory. This provides an easy way to hook the function and get back
+a pointer to the original function, should you need to call it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">int</span> <span class="n">LHHookFunctions</span><span class="p">(</span><span class="k">const</span> <span class="k">struct</span> <span class="n"><a href="Structs/LHFunctionHook.html">LHFunctionHook</a></span> <span class="o">*</span><span class="n">hooks</span><span class="p">,</span> <span class="kt">int</span> <span class="n">count</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hooks</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of LHFunctionHook describing each function to hook</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>count</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of functions to hook</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns any errors that may have taken place while hooking the functions</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://libhooker.com" target="_blank" rel="external">CoolStar</a>. All rights reserved. (Last updated: 2021-04-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

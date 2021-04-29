@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LIBHOOKER_ERR Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Enum/LIBHOOKER_ERR" class="dashAnchor"></a>
+    <a title="LIBHOOKER_ERR Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> 1.6.0 Docs</a> (100% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        LIBHOOKER_ERR Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/LHOptions.html">LHOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LIBHOOKER_ERR.html">LIBHOOKER_ERR</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LBHookMessage">LBHookMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHCloseImage">LHCloseImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHExecMemory">LHExecMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHFindSymbols">LHFindSymbols</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHHookFunctions">LHHookFunctions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHOpenImage">LHOpenImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHPatchMemory">LHPatchMemory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@LHStrError">LHStrError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/LHFunctionHook.html">LHFunctionHook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LHFunctionHookOptions.html">LHFunctionHookOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LHMemoryPatch.html">LHMemoryPatch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/c:@S@libhooker_image">libhooker_image</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>LIBHOOKER_ERR</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">LIBHOOKER_ERR</span> <span class="p">{}</span></code></pre>
+
+                </div>
+              </div>
+            <p>Raw libhooker error values (use LHStrError to convert to a human readable string)</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@LIBHOOKER_ERR@LIBHOOKER_OK"></a>
+                    <a name="//apple_ref/objc/Case/LIBHOOKER_OK" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@LIBHOOKER_ERR@LIBHOOKER_OK">LIBHOOKER_OK</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>No errors took place</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">LIBHOOKER_OK</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_SELECTOR_NOT_FOUND"></a>
+                    <a name="//apple_ref/objc/Case/LIBHOOKER_ERR_SELECTOR_NOT_FOUND" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_SELECTOR_NOT_FOUND">LIBHOOKER_ERR_SELECTOR_NOT_FOUND</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An Objective-C selector was not found. (This error is from libblackjack)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">LIBHOOKER_ERR_SELECTOR_NOT_FOUND</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_SHORT_FUNC"></a>
+                    <a name="//apple_ref/objc/Case/LIBHOOKER_ERR_SHORT_FUNC" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_SHORT_FUNC">LIBHOOKER_ERR_SHORT_FUNC</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A function was too short to hook</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">LIBHOOKER_ERR_SHORT_FUNC</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_BAD_INSN_AT_START"></a>
+                    <a name="//apple_ref/objc/Case/LIBHOOKER_ERR_BAD_INSN_AT_START" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_BAD_INSN_AT_START">LIBHOOKER_ERR_BAD_INSN_AT_START</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A problematic instruction was found at the start. We can&rsquo;t preserve the original function due to this instruction getting clobbered.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">LIBHOOKER_ERR_BAD_INSN_AT_START</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_VM"></a>
+                    <a name="//apple_ref/objc/Case/LIBHOOKER_ERR_VM" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_VM">LIBHOOKER_ERR_VM</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An error took place while handling memory pages</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">LIBHOOKER_ERR_VM</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_NO_SYMBOL"></a>
+                    <a name="//apple_ref/objc/Case/LIBHOOKER_ERR_NO_SYMBOL" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@LIBHOOKER_ERR@LIBHOOKER_ERR_NO_SYMBOL">LIBHOOKER_ERR_NO_SYMBOL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>No symbol was specified for hooking</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">LIBHOOKER_ERR_NO_SYMBOL</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://libhooker.com" target="_blank" rel="external">CoolStar</a>. All rights reserved. (Last updated: 2021-04-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
