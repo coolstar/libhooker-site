@@ -1,0 +1,19 @@
+- name: CoolStar
+  github: coolstar
+  twitter: CStar_OW
+  role: Lead Developer
+
+- name: 23 Aaron
+  github: 23aaron
+  twitter: 23aaron_
+  role: Web Developer
+  
+- name: SlimShadyIAm
+  github: slimshadyiam
+  twitter: slimshadydev
+  role: Site Contributor
+
+- name: MegaDev
+  github: MegaDevIOS
+  twitter: omegaluldev
+  role: Site Contributor
